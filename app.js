@@ -12,9 +12,9 @@ function ToBuyShoppingController(ShoppingListCheckOffService) {
     var toBuy = this;
     toBuy.items = ShoppingListCheckOffService.getItems();
 
-    toBuy.pushItem = function(index){
+    toBuy.pushItem = function(index, item){
         //alert(index);
-        ShoppingListCheckOffService(index);
+        ShoppingListCheckOffService.getIndex(index, item);
     }
 
 }
@@ -41,8 +41,8 @@ function ShoppingListCheckOffService() {
      
 //   };
 
-    service.getIndex = function (index){
-        alert(index);
+    service.getIndex = function (index, item){
+        alert(index, ' ', item.quantity);
         // items.splice(index,1);
         // bought.splice(index, 0, item);
         // alert('item: '+item+' with index: '+index+' was bought');
