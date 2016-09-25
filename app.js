@@ -40,9 +40,10 @@ function ShoppingListCheckOffService() {
     service.getIndex = function (index, item){
         alert(index);
         items.splice(index,1);
-        boughtArr.push(items[index]);
+        return index;
         // alert('item: '+item+' with index: '+index+' was bought');
     }
+    console.log(index);
 
     service.getItems = function(){
         return items;
