@@ -19,7 +19,7 @@ AlreadyBoughtShoppingController.$inject = ['ShoppingListCheckOffService'];
 function AlreadyBoughtShoppingController(ShoppingListCheckOffService) {
     var bought = this;
 
-    bought.pushItem = ShoppingListCheckOffService.pushItem();
+    bought.pushItem = ShoppingListCheckOffService.pushItem(index);
 }
 
 
