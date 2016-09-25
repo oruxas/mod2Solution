@@ -14,7 +14,7 @@ function ToBuyShoppingController(ShoppingListCheckOffService) {
 
     toBuy.pushItem = function(index){
         //alert(index);
-        ShoppingListCheckOffService(index, item);
+        ShoppingListCheckOffService(index);
     }
 
 }
