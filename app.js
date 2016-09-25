@@ -20,7 +20,7 @@ function AlreadyBoughtShoppingController(ShoppingListCheckOffService) {
     var bought = this;
 
     bought.pushItem = function(index){
-         alert(index);
+        ShoppingListCheckOffService.getIndex(index);
     }
 }
 
@@ -37,6 +37,10 @@ function ShoppingListCheckOffService() {
 //   service.pushItem = function(index){
      
 //   };
+
+    service.getIndex = function (index){
+        alert(index);
+    }
 
     service.getItems = function(){
         return items;
