@@ -1,5 +1,5 @@
-  (function () {
-     'use strict'; 
+//   (function () {
+//      'use strict'; 
 
 
   angular.module("ShoppingListCheckOff", [])
@@ -9,7 +9,7 @@
         toBuyArr.items = ShoppingListCheckOffService.getItems();
     })
     .controller("AlreadyBoughtShoppingController", AlreadyBoughtShoppingController)
-    .service('ShoppingListCheckOffService', [], function(){
+    .service('ShoppingListCheckOffService', function(){
          var service = this;
 
         var toBuyArr = [];
@@ -44,6 +44,6 @@
 
     // };
 
-}());
+// }());
   
   
