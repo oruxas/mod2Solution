@@ -36,7 +36,8 @@
      <ul>
        <!--<li>Buy 10 cookies <button class="btn btn-default"><span class="glyphicon glyphicon-ok"></span> Bought</button></li>
        <li>Buy 10 cookies <button class="btn btn-default"><span class="glyphicon glyphicon-ok"></span> Bought</button></li>-->
-       <li ng-repeat="item in toBuy.items">Buy {{item.name}} {{item.quantity}}</li>
+       <li ng-repeat="item in toBuy.items">Buy {{item.quantity}} {{item.name}}</li>
+       <button class="btn btn-default"><span class="glyphicon glyphicon-ok"></span> Bought</button>
      </ul>
      <div class="emptyMessage">Everything is bought!</div>
     </div>
