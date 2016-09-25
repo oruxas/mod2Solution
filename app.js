@@ -12,7 +12,7 @@
     .service('ShoppingListCheckOffService', function(){
          var service = this;
 
-        var toBuyArr = [];
+        var items = [];
         var boughtArr  = [];
 
         toBuyArr = [{name: "cookies", quantity: 10}, {name: "cookies", quantity: 11}, {name: "cookies", quantity: 12}, {name: "cookies", quantity: 13}, {name: "cookies", quantity: 14},
@@ -20,7 +20,7 @@
         
 
         service.getItems = function(){
-            return toBuyArr;
+            return items;
         }
     });
 
