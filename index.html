@@ -4,8 +4,7 @@
     <title>Shopping List Check Off</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/bootstrap.min.css">
-     <script src="angular.min.js"></script>
-    <script src="app.js"> </scrpt>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
     <style>
       .emptyMessage {
         font-weight: bold;
@@ -36,7 +35,7 @@
      <ul>
        <li>Buy 10 cookies <button class="btn btn-default"><span class="glyphicon glyphicon-ok"></span> Bought</button></li>
        <li>Buy 10 cookies <button class="btn btn-default"><span class="glyphicon glyphicon-ok"></span> Bought</button></li>
-       <li ng-repeat="item in toBuy.items">Buy {{item}}</li>
+       <li ng-repeat="item in toBuy">Buy {{item.name}} {{item.quantity}}</li>
      </ul>
      <div class="emptyMessage">Everything is bought!</div>
     </div>
