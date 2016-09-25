@@ -19,7 +19,9 @@ AlreadyBoughtShoppingController.$inject = ['ShoppingListCheckOffService'];
 function AlreadyBoughtShoppingController(ShoppingListCheckOffService) {
     var bought = this;
 
-    bought.pushItem = ShoppingListCheckOffService.pushItem(index);
+    bought.pushItem = function(index){
+         alert(index);
+    }
 }
 
 
@@ -32,9 +34,9 @@ function ShoppingListCheckOffService() {
   items = [{name: "cookies", quantity: 10}, {name: "cookies", quantity: 11}, {name: "cookies", quantity: 12}, {name: "cookies", quantity: 13}, {name: "cookies", quantity: 14},
   {name: "cookies", quantity: 15}, {name: "cookies", quantity: 16}, {name: "cookies", quantity: 17}, {name: "cookies", quantity: 18}, {name: "cookies", quantity: 19}];
 
-  service.pushItem = function(index){
-      alert(index);
-  };
+//   service.pushItem = function(index){
+     
+//   };
 
     service.getItems = function(){
         return items;
