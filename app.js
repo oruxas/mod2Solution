@@ -38,9 +38,10 @@ function ShoppingListCheckOffService() {
   {name: "cookies", quantity: 15}, {name: "cookies", quantity: 16}, {name: "cookies", quantity: 17}, {name: "cookies", quantity: 18}, {name: "cookies", quantity: 19}];
 
     service.getIndex = function (index, item){
-        alert(index);
+        //alert(index);
         var newItem = items.splice(index,1);
-        boughtArr.push(newItem);
+        boughtArr.push(item);
+        //boughtArr.push(newItem);
         // alert('item: '+item+' with index: '+index+' was bought');
     }
     service.getItems = function(){
