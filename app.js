@@ -4,7 +4,9 @@
 
   angular.module("ShoppingListCheckOff", [])
     .controller("ToBuyShoppingController", ['$scope','ShoppingListCheckOffService'], function($scope, ShoppingListCheckOffService){
-         $scope.toBuyArr = ShoppingListCheckOffService.getItems();
+        var toBuyArr = this;
+
+        toBuyArr.items = ShoppingListCheckOffService.getItems();
     })
     .controller("AlreadyBoughtShoppingController", AlreadyBoughtShoppingController)
     .service('ShoppingListCheckOffService', [], function(){
