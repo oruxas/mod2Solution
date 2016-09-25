@@ -12,9 +12,9 @@ function ToBuyShoppingController(ShoppingListCheckOffService) {
     var toBuy = this;
     toBuy.items = ShoppingListCheckOffService.getItems();
 
-    toBuy.pushItem = function(index, item){
+    toBuy.pushItem = function(index){
         //alert(index);
-        ShoppingListCheckOffService.getIndex(index, item);
+        ShoppingListCheckOffService.getIndex(index);
     }
 
 }
@@ -37,7 +37,7 @@ function ShoppingListCheckOffService() {
   items = [{name: "cookies", quantity: 10}, {name: "cookies", quantity: 11}, {name: "cookies", quantity: 12}, {name: "cookies", quantity: 13}, {name: "cookies", quantity: 14},
   {name: "cookies", quantity: 15}, {name: "cookies", quantity: 16}, {name: "cookies", quantity: 17}, {name: "cookies", quantity: 18}, {name: "cookies", quantity: 19}];
 
-    service.getIndex = function (index, item){
+    service.getIndex = function (index){
         //alert(index);
         var newItem = items.splice(index,1);
         boughtArr.push(newItem);
