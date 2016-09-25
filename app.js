@@ -7,7 +7,20 @@
          ShoppingListCheckOffService.getItems();
     })
     .controller("AlreadyBoughtShoppingController", AlreadyBoughtShoppingController)
-    .service('ShoppingListCheckOffService',ShoppingListCheckOffService);
+    .service('ShoppingListCheckOffService', [], function(){
+         var service = this;
+
+        var toBuyArr = [];
+        var boughtArr  = [];
+
+        toBuyArr = [{name: "cookies", quantity: 10}, {name: "cookies", quantity: 11}, {name: "cookies", quantity: 12}, {name: "cookies", quantity: 13}, {name: "cookies", quantity: 14},
+        {name: "cookies", quantity: 15}, {name: "cookies", quantity: 16}, {name: "cookies", quantity: 17}, {name: "cookies", quantity: 18}, {name: "cookies", quantity: 19}];
+        
+
+        service.getItems = function(){
+            return toBuyArr;
+        }
+    });
 
     //Injection
     // ToBuyShoppingController.$inject = ['ShoppingListCheckOffService'];
@@ -24,21 +37,10 @@
     };
 
     //Service Implementation
-    function ShoppingListCheckOffService(){
-        var service = this;
+    // function ShoppingListCheckOffService(){
+       
 
-        var toBuyArr = [];
-        var boughtArr  = [];
-
-        toBuyArr = [{name: "cookies", quantity: 10}, {name: "cookies", quantity: 11}, {name: "cookies", quantity: 12}, {name: "cookies", quantity: 13}, {name: "cookies", quantity: 14},
-        {name: "cookies", quantity: 15}, {name: "cookies", quantity: 16}, {name: "cookies", quantity: 17}, {name: "cookies", quantity: 18}, {name: "cookies", quantity: 19}];
-        
-
-        service.getItems = function(){
-            return toBuyArr;
-        }
-
-    };
+    // };
 
 }());
   
