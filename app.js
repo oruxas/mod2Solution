@@ -24,7 +24,7 @@ AlreadyBoughtShoppingController.$inject = ['ShoppingListCheckOffService'];
 function AlreadyBoughtShoppingController(ShoppingListCheckOffService) {
     var bought = this;
 
-   bought.boughtArr = ShoppingListCheckOffService.getIndex(index, item);
+   bought.boughtArr = ShoppingListCheckOffService.getBoughtItems();
 }
 
 
@@ -39,10 +39,14 @@ function ShoppingListCheckOffService() {
 
     service.getIndex = function (index, item){
         //alert(index);
-        var newItem = items.splice(index,1);
-        boughtArr.push(item);
+        items.splice(index,1);
+        boughtArr.push(items[index]);
         //boughtArr.push(newItem);
         // alert('item: '+item+' with index: '+index+' was bought');
+    }
+
+    service.getBoughtItems = function(){
+        return boughtArr;
     }
     service.getItems = function(){
         return items;
