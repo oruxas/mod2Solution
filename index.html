@@ -35,6 +35,7 @@
      <ul>
        <li>Buy 10 cookies <button class="btn btn-default"><span class="glyphicon glyphicon-ok"></span> Bought</button></li>
        <li>Buy 10 cookies <button class="btn btn-default"><span class="glyphicon glyphicon-ok"></span> Bought</button></li>
+       <li ng-repeat="item in toBuyArr">Buy {{item.name}} {{item.quantity}}</li>
      </ul>
      <div class="emptyMessage">Everything is bought!</div>
     </div>
