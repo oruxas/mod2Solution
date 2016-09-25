@@ -10,8 +10,8 @@
     .service('ShoppingListCheckOffService',ShoppingListCheckOffService);
 
     //Injection
-    ToBuyShoppingController.$inject = ['ShoppingListCheckOffService'];
-    AlreadyBoughtShoppingController.$inject =['ShoppingListCheckOffService'];
+    // ToBuyShoppingController.$inject = ['ShoppingListCheckOffService'];
+    // AlreadyBoughtShoppingController.$inject =['ShoppingListCheckOffService'];
 
     // //Controller Implementation
     // function ToBuyShoppingController(ShoppingListCheckOffService) {
