@@ -32,7 +32,7 @@ function ShoppingListCheckOffService() {
   var service = this;
 
   var items = [];
-  var bought = [];
+  var boughtArr = [];
 
   items = [{name: "cookies", quantity: 10}, {name: "cookies", quantity: 11}, {name: "cookies", quantity: 12}, {name: "cookies", quantity: 13}, {name: "cookies", quantity: 14},
   {name: "cookies", quantity: 15}, {name: "cookies", quantity: 16}, {name: "cookies", quantity: 17}, {name: "cookies", quantity: 18}, {name: "cookies", quantity: 19}];
@@ -40,7 +40,7 @@ function ShoppingListCheckOffService() {
     service.getIndex = function (index, item){
         alert(index);
         items.splice(index,1);
-        bought.push(items[index]);
+        boughtArr.push(items[index]);
         // alert('item: '+item+' with index: '+index+' was bought');
     }
 
