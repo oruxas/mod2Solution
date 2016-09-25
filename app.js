@@ -13,7 +13,7 @@ function ToBuyShoppingController(ShoppingListCheckOffService) {
     toBuy.items = ShoppingListCheckOffService.getItems();
 
     toBuy.pushItem = function(index){
-        ShoppingListCheckOffService.getIndex(index);
+        alert(index);
     }
 
 }
