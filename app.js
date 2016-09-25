@@ -44,7 +44,7 @@ function ShoppingListCheckOffService() {
     service.getIndex = function (index, item){
         alert(index);
         items.splice(index,1);
-        bought.splice(index, 0, item);
+        bought.push(items[index]);
         // alert('item: '+item+' with index: '+index+' was bought');
     }
 
