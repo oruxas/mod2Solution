@@ -40,7 +40,7 @@
           <button class="btn btn-default" ng-click="toBuy.pushItem($index)"><span class="glyphicon glyphicon-ok"></span> Bought</button>
        </li>
      </ul>
-     <div class="emptyMessage" ng-if="toBuy.items.length === 0">Everything is bought!</div>
+     <div class="emptyMessage" ng-if="toBuy.items.length < 1">Everything is bought!</div>
     </div>
 
     <!-- Already Bought List -->
