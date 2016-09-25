@@ -42,7 +42,7 @@ function ShoppingListCheckOffService() {
 //   };
 
     service.getIndex = function (index, item){
-        alert(index, ' ', item.quantity);
+        alert(index, ' ', item);
         // items.splice(index,1);
         // bought.splice(index, 0, item);
         // alert('item: '+item+' with index: '+index+' was bought');
